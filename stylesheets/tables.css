@@ -1,0 +1,20 @@
+table{
+	border-collapse: collapse;
+}
+td {
+	width:70em;
+}
+tr, td {
+	padding:0.4em;
+}
+td.first-column {
+	width: 10em;
+	text-align: right;
+	border-right:1px solid black;
+}
+tr {
+	border-top:1px solid black;
+}
+tr.first-row {
+	border-top:0;
+}
