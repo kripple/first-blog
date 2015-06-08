@@ -2,30 +2,48 @@
 	font-family:'Lora',Sans-serif;
 	background-color: #FCF9FF;
 }
-#title {
-	text-align: center;
-	font-size:3em;
-	color:#7E7C7F;
-	margin:0.25em;
+
+/* 
+** Header
+*/
+header div#title-block {
+	display: inline-block;
+	height:58px;
+	width:300px;
+	padding-left:2px;
+
 }
-#subtitle {
-	text-align: center;
-	font-size:1.5em;
-	color:#BDBBBF;
-	margin:0.5em;
+header div#subtitle-block {
+	display: inline-block;
+	margin: 0 auto;
+
 }
 nav#social-media-buttons {
-	text-align:center;
-	margin:0.5em;
+	margin:0;
+	display:inline-block;
+	float:right;
+}
+
+header h1 {
+	font-size:3em;
+	color:#7E7C7F;
+	margin:0em;
+}
+header h2 {
+	font-family:'Bad Script',cursive;
+	font-size:1.5em;
+	color:#BDBBBF;
+	margin:0em;
 }
 .button {
-	width:2em;
-	height:2em;
-	margin:0.5em;
+	width:40px;
+	height:40px;
+	margin:8px;
 }
-ul.nav-bar, ul.footer-bar {
+
+ul.nav-bar, div.footer-bar {
 	list-style-type:none;
-	margin: 0;
+	margin-top: 0.5em;
 	padding: 0.5em;
 	border: 1px solid #BDBBBF;
 	color:#7E7C7F;
@@ -34,50 +52,58 @@ li.menu-list, li.footer-link {
 	display:inline-block;
 }
 li.menu-list a {
-	padding-right:1em;
+	padding-right:1em;	
+}
+
+
+/*
+** Links
+*/
+
+a {
 	text-decoration:none;
 	color:#7E7C7F;
 }
-li.menu-list a:hover {
-	color:#3F3E40;
+a:hover {
 	text-decoration:underline;
+ 	color:#3F3E40;
 }
-li#search {
-	padding-left:1em;
-}
-ul.footer-bar {
-	text-align: center;
-}
-li.footer-link a, a.blog-title {
-	text-decoration:none;
-}
-li.footer-link a:hover, a.blog-title:hover {
-	text-decoration:underline;
-}
-li.footer-link a {
-	color:#7E7C7F;
-}
-li.footer-link a {
-	color:#3F3E40;
-	padding-right:1em;
-}
+
+/*
+** Footer
+*/
+
 footer {
 	margin-top:1em;
 	clear:both;
 	bottom: 0;
 }
+
+div.footer-link {
+	display:inline-block;
+}
 #prev {
-	/* Move to far left */
+	float:left;
+	padding-right:38.5%;
 }
 #next {
-	/* Move to far right */
+	float:right;
+	
+}
+#blog-index {
+
 }
 #legal {
 	font-size:0.8em;
-	padding-left:0.2em;
+	padding-left:2px;
 }
+
+/* 
+** Blog Pages
+*/
+
 .blog-title {
-	font-family:impact;
+	font-family:'Bad Script',cursive;
 	font-size:2em;
 }
 .blog-date {
@@ -85,6 +111,30 @@ footer {
 	font-size:0.9em;
 	padding-top:2em;
 }
+
+/*
+** About Me
+*/
+
+#blog-photo {
+	height:450px;
+	padding:0em;
+	margin:0px 0px 0px 50px;
+	border:2px solid black;
+	display:inline-block;
+}
+#blog-bio {
+	height:480px;
+	width:700px;
+	padding:0em;
+	margin:0px 0px 0px 10px;
+	display:inline-block;
+}
+
+/*
+** Blog Index
+*/
+
 hr {
 	border-bottom:1px dashed #E3E0E5;
 	border-left:0px;
@@ -96,20 +146,22 @@ hr {
 hr.title-underline{
 	padding-top:0;
 }
-section {
-	padding-left:0.2em;
-}
+
+/*
+** Unsorted
+*/
+
 a.blog-title {
 	color:#3F3E40;
 }
 .page-title {
-	padding-left:0.2em;
-	padding-top:0.5em;
+	padding-left:0em;
+	padding-top:0em;
+	margin:0em;
 	margin-bottom:-0.3em;
-	font-size:2.5em;
-	font-family:impact;
+	font-size:2.0em;
+	font-family: 'Bad Script',cursive;
 }
-
 
 
 
