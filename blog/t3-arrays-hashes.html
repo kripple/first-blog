@@ -8,42 +8,64 @@
 </head>
 
 <body>
-    <header>
-      <div id="title-block"><h1 id="title">Kelly Codes</h1></div>
-      <!--<div id="subtitle-block"><h2 id="subtitle">Tales of a Junior Web Developer (in training)</h2></div>-->
+  <header>
+    <div id="title-block"><a href="http://kripple.github.io/index.html"><h1 id="title">Kelly Ripple</h1></a></div>
 
-      <nav id="social-media-buttons">
-        <a href="https://www.linkedin.com/in/kellymripple"><img class="button" alt="#" src="../imgs/linkedin.png"/></a>
-        <a href="https://github.com/kripple"><img class="button" alt="#" src="../imgs/github.png"/></a>
-        <a href="https://twitter.com/krippleffect"><img class="button" alt="#" src="../imgs/twitter.png"/></a>
-        <a href="https://plus.google.com/102514019145153855099/"><img class="button" alt="#" src="../imgs/google-plus.png"/></a>
-        <a href="https://www.facebook.com/kelly.ripple.5"><img class="button"  alt="#" src="../imgs/facebook.png"/></a>
-      </nav>
+    <nav id="social-media-buttons">
+      <a href="https://github.com/kripple"><img class="button" alt="#" src="../imgs/github.png"/></a>
+      <a href="https://www.linkedin.com/in/kellymripple"><img class="button" alt="#" src="../imgs/linkedin.png"/></a>
+      <a href="https://twitter.com/krippleffect"><img class="button" alt="#" src="../imgs/twitter.png"/></a>
+    </nav>
 
-      <ul class="nav-bar">
-        <li class="menu-list"><a href="http://kripple.github.io/index.html">Home</a></li>
-        <li class="menu-list"><a href="http://kripple.github.io/blog-index.html">Blog Index</a></li>
-        <li class="menu-list"><a href="http://kripple.github.io/about-me.html">About Me</a></li>
-        <li class="menu-list"><a href="mailto:kelly.m.ripple@gmail.com">Contact</a></li>
-      </ul>
-    </header>
+    <ul class="nav-bar">
+      <li class="menu-list"><a href="http://kripple.github.io/about-me.html">About</a></li>
+      <li class="menu-list"><a href="#">Projects</a></li>
+      <li class="menu-list"><a href="http://kripple.github.io/blog-index.html">Blog</a></li>
+      <li class="menu-list"><a href="#">Resume</a></li>
+      <li class="menu-list"><a href="mailto:kelly.m.ripple@gmail.com">Contact</a></li>
+    </ul>
+  </header>
 
-  <section>
-    <h4 class="blog-date">June 7, 2015</h4>
-    <h3 class="blog-title">Hash-tastic</h3>
-    <p><!--text--></p>
-    <p><!--text--></p>
-    <p><!--text--></p>
-    <p><!--text--></p>
-  </section>
+  <main>
+    <section>
+      <h3 class="blog-title">Hash-tastic</h3>
+      <h4 class="blog-date">[ June 8, 2015 ]</h4>
+      <p>This week I learned about the glorious data storage object that is the Hash. The following will be some fun information on how to differentiate, define, and reference arrays and hashes. Arrays and hashes are both constucts used for data storage. Their construction and syntax are different, so depending on what you're trying to do, one will likely be better than the other for specific applications.</p>
+    </section>
 
-    <footer>
-      <div class="footer-bar">
-        <div class="footer-link" id="prev"><a href="#">&lt;= Previous</a></div>
-        <div class="footer-link" id="blog-index"><a href="http://kripple.github.io/blog-index.html">Blog Index</a></div>
-        <div class="footer-link" id="next"><a href="#">Next =></a></div>
-      </div>
-      <p id="legal">Legal Stuff</p>
-    </footer>
+    <section>  
+      <h2>Define</h2>
+      <p>- Array -</p>
+      <p>Ordered, iteger-indexed collections of any object. Array indexing starts at 0 and goes to (n-1), where n is the number of array indices. A negative index is assumed to be relative to the end of the array—that is, an index of -1 indicates the last element of the array, -2 is the next to last element in the array, and so on. </p>
+      <p>- Hash -</p>
+      <p>A collection of key-value pairs. Indexing is done via arbitrary keys of any object type. Hashes order their values in the sequence that the corresponding keys were inserted. By default, hashes return 'nil' when accessing keys that do not exist in the hash. It's possible to define this value to something other than 'nil' (see below).</p>
+    </section>
+      
+    <section>
+      <h2>Create</h2>
+      <p><code>Array.new</code> is functionally the same as <code>array = []</code> for creating a new array, except <code>Array.new</code> has some fun options for initializing the array however you like. For example:</p>
+      <p><code>Array.new # => []
+Array.new(2) # => [nil,nil]
+Array.new(3,"apple") # => ["apple","apple","apple"]</code></p>
+      <p>The procedure for creating a new hash is all but identical: <code>Hash.new</code>, or <code>hash = {}</code>. Similarly, <code>Hash.new</code> can do the following:</p> 
+      <p><code>Hash.new # => {}
+Hash.new(2) # => {}
+Hash.new(3,"apple") # => probably a syntax error (don't do this)</code></p>
+      <p>The <code>Hash.new(argument)</code> is the default value for accessing keys that do not exist in the hash. If you were to create an empty hash with the argument '2', and then try to access a nonexistent key (since our hash is empty in this example, ALL keys are nonexistent), the hash would return '2' instead of returning 'nil'.</p>
+    </section>
+
+    <section>
+      <h2>Access</h2>
+      <p>This is the easiest part:</p>
+      <p><code>puts array[integer] # => value of the array at the specified integer 
+puts hash["key"] # => value of the hash at the specified key</code></p>
+      <p>Arrays have integer index &lt;-> value pairs, hashes have key &lt;-> value pairs. Try creating and then accessing array/hash values at indices/keys that do not exist. That way, you'll be able to recognize it if you ever do it unintentionally.</p>
+      <p>Happy Coding!</p> 
+    </section>
+  </main>
+
+  <footer>
+    <p id="legal">Legal Stuff</p>
+  </footer>
 </body>
 
