@@ -31,12 +31,18 @@
       <h3 class="blog-title">Hash-tastic</h3>
       <h4 class="blog-date">[ June 8, 2015 ]</h4>
       <p>This week I learned about the glorious data storage object that is the Hash. The following will be some fun information on how to differentiate, define, and reference arrays and hashes. Arrays and hashes are both constucts used for data storage. Their construction and syntax are different, so depending on what you're trying to do, one will likely be better than the other for specific applications.</p>
-      
-      <h2>Definitions</h2>
-      <p>Array - Ordered, iteger-indexed collections of any object. Array indexing starts at 0 and goes to (n-1), where n is the number of array indices. A negative index is assumed to be relative to the end of the array—that is, an index of -1 indicates the last element of the array, -2 is the next to last element in the array, and so on. </p>
-      <p>Hash - A collection of key-value pairs. Indexing is done via arbitrary keys of any object type. Hashes order their values in the sequence that the corresponding keys were inserted. By default, hashes return 'nil' when accessing keys that do not exist in the hash. It's possible to define this value to something other than 'nil' (see below).</p>
+    </section>
 
-      <h2>Creating Arrays and Hashes</h2>
+    <section>  
+      <h2>Define</h2>
+      <p>- Array -</p>
+      <p>Ordered, iteger-indexed collections of any object. Array indexing starts at 0 and goes to (n-1), where n is the number of array indices. A negative index is assumed to be relative to the end of the array—that is, an index of -1 indicates the last element of the array, -2 is the next to last element in the array, and so on. </p>
+      <p>- Hash -</p>
+      <p>A collection of key-value pairs. Indexing is done via arbitrary keys of any object type. Hashes order their values in the sequence that the corresponding keys were inserted. By default, hashes return 'nil' when accessing keys that do not exist in the hash. It's possible to define this value to something other than 'nil' (see below).</p>
+    </section>
+      
+    <section>
+      <h2>Create</h2>
       <p><code>Array.new</code> is functionally the same as <code>array = []</code> for creating a new array, except <code>Array.new</code> has some fun options for initializing the array however you like. For example:</p>
       <p><code>Array.new # => []
 Array.new(2) # => [nil,nil]
@@ -44,36 +50,17 @@ Array.new(3,"apple") # => ["apple","apple","apple"]</code></p>
       <p>The procedure for creating a new hash is all but identical: <code>Hash.new</code>, or <code>hash = {}</code>. Similarly, <code>Hash.new</code> can do the following:</p> 
       <p><code>Hash.new # => {}
 Hash.new(2) # => {}
-Hash.new(3,"apple") # => probably a syntax error (don't do this)
-      </code></p>
+Hash.new(3,"apple") # => probably a syntax error (don't do this)</code></p>
       <p>The <code>Hash.new(argument)</code> is the default value for accessing keys that do not exist in the hash. If you were to create an empty hash with the argument '2', and then try to access a nonexistent key (since our hash is empty in this example, ALL keys are nonexistent), the hash would return '2' instead of returning 'nil'.</p>
+    </section>
 
-      <h2>Accessing Arrays and Hashes</h2>
-
-
-  hash = { :name => "David", :age => 49 }
-  can also be written like this:
-
-  hash = { name: "David", age: 49 }
-      
-      <p></p>
-      
-
-  nilHash = { 'x' => 5 }
-  nilHash['x']   # Return 5, because the key 'x' exists in nilHash
-  nilHash['foo'] # Returns nil, because there is no key 'foo' in nilHash
-
-  defaultHash = Hash.new(100)
-  defaultHash['x'] = 5
-  defaultHash['x'] # Return 5, because the key 'x' exists in defaultHash 
-
-  defaultHash['foo'] 
-  # Returns 100 instead of nil, because you passed 100
-  # as the default value for non-existent keys for this hash
-
-
-      <p></p>
-      <p></p>
+    <section>
+      <h2>Access</h2>
+      <p>This is the easiest part:</p>
+      <p><code>puts array[integer] # => value of the array at the specified integer 
+puts hash["key"] # => value of the hash at the specified key</code></p>
+      <p>Arrays have integer index &lt;-> value pairs, hashes have key &lt;-> value pairs. Try creating and then accessing array/hash values at indices/keys that do not exist. That way, you'll be able to recognize it if you ever do it unintentionally.</p>
+      <p>Happy Coding!</p> 
     </section>
   </main>
 
