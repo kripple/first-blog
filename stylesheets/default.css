@@ -165,17 +165,29 @@ div.footer-link {
 */
 
 #blog-photo {
-	width:200px;
+	display:inline-block;
 	margin:0 auto;
-	margin-top:8px;
-	margin-bottom:8px;
-
+	width:240px;
 }
 #blog-photo img {
 	width:200px;	
+	display:block;
+	margin:0 auto;
 	border:2px solid #3F3E40;;
-	margin-top:8px;
-	margin-bottom:8px;
+}
+div.columns {
+	display:block;
+	height:258px; 
+}
+div.column-one {
+	display:inline-block;
+	max-width: 300px;
+    float: left;
+}
+div.column-two {
+	display:inline-block;
+	max-width: 300px;
+    float: right;
 }
 
 /*
