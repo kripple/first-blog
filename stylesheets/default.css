@@ -160,22 +160,6 @@ div.footer-link {
 	padding-bottom:8px;
 }
 
-/* 
-** Blog Pages
-*/
-
-.blog-title {
-	font-family:'Bad Script',cursive;
-	font-size:2em;
-	color:#3F3E40;
-	margin:0;
-}
-.blog-date {
-	color:#7E7C7F;
-	font-size:0.9em;
-	margin:0;
-}
-
 /*
 ** About Me
 */
@@ -195,9 +179,22 @@ div.footer-link {
 }
 
 /*
-** Blog Index
+** Blog 
 */
 
+.blog-title {
+	font-family:'Bad Script',cursive;
+	font-size:2em;
+}
+.blog-date {
+	color:#7E7C7F;
+	font-size:0.9em;
+	margin:0;
+}
+/*.blog-date (special) {
+		display:block;
+	margin-bottom:8px;
+}*/
 hr {
 	border-bottom:1px dashed #E3E0E5;
 	border-left:0px;
@@ -208,20 +205,29 @@ hr {
 }
 hr.title-underline{
 	padding-top:0;
+	margin-bottom:15px;
+}
+
+section.padded-section {
+	padding-bottom:15px;
+	display:block;
+}
+a.blog-title {
+	color:#3F3E40;
+	display:block;
+	margin-bottom:-5px;
 }
 
 /*
 ** Unsorted
 */
 
-a.blog-title {
-	color:#3F3E40;
+.center-title {
+	margin:0 auto;
+	text-align:center;
+	display:block;
 }
 .page-title {
-	padding-left:0em;
-	padding-top:0em;
-	margin:0em;
-	margin-bottom:-0.3em;
 	font-size:2.0em;
 	font-family: 'Bad Script',cursive;
 }
