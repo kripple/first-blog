@@ -48,6 +48,8 @@
       <p><code>Array.new # => []
 Array.new(2) # => [nil,nil]
 Array.new(3,"apple") # => ["apple","apple","apple"]</code></p>
+      <p>Or the following:</p><p><code>example_array = [1,2,3]
+copycat_array = Array.new(example_array) # => [1,2,3]</code></p>
       <p>The procedure for creating a new hash is all but identical: <code>Hash.new</code>, or <code>hash = {}</code>. Similarly, <code>Hash.new</code> can do the following:</p> 
       <p><code>Hash.new # => {}
 Hash.new(2) # => {}
