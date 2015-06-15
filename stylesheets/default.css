@@ -183,11 +183,15 @@ div.column-one {
 	display:inline-block;
 	max-width: 300px;
     float: left;
+    height: 236px;
+  	padding-top: 32px;
 }
 div.column-two {
 	display:inline-block;
 	max-width: 300px;
     float: right;
+    height: 236px;
+  	padding-top: 32px;
 }
 
 /*
