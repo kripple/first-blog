@@ -9,6 +9,12 @@ code {
 	white-space:pre-wrap;
 	display:inline-block;
 }
+section {
+	/*padding-left:10px;*/
+}
+main {
+	color:#3F3E40;
+}
 
 /*
 ** Wireframe Sizing
@@ -175,19 +181,23 @@ div.footer-link {
 	margin:0 auto;
 	border:2px solid #3F3E40;;
 }
-div.columns {
+div.columns-abt-me {
 	display:block;
 	height:258px; 
 }
-div.column-one {
+div.column-one-abt-me {
 	display:inline-block;
 	max-width: 300px;
     float: left;
+    height: 236px;
+  	padding-top: 32px;
 }
-div.column-two {
+div.column-two-abt-me {
 	display:inline-block;
 	max-width: 300px;
     float: right;
+    height: 236px;
+  	padding-top: 32px;
 }
 
 /*
@@ -229,10 +239,75 @@ a.blog-title {
 	display:block;
 	margin-bottom:-5px;
 }
+strong {
+	font-style:italic;
+}
 
+/*
+** Blog Index
+*/
+
+p.nolink-title {
+	font-family:'Bad Script',cursive;
+	font-size:2em;
+	margin:0;
+	padding-top: 32px;
+}
+
+ul.month-div {
+	display:block;
+	list-style-type:none;
+	margin-top: 0.5em;
+	margin-bottom:0;
+	padding: 0.5em;
+	color:#7E7C7F;
+}
+li.month-div-left {
+	display:inline-block;
+	width:38%;
+}
+li.month-div-center {
+	display:inline-block;
+	width:20%;
+	text-align:center;
+}
+li.month-div-right{
+	display:inline-block;
+	width:38%;
+}
+
+
+div.columns-blog-index{
+	display:block;
+
+}
+div.column-one-blog-index {
+	display:inline-block;
+	vertical-align: top;
+	width:49%;
+
+}
+div.column-two-blog-index {
+	display:inline-block;
+	vertical-align: top;
+	width:49%;
+
+}
+div#columns-blog-index-may{
+	display:block;
+
+}
+div#columns-blog-index-june{
+	display:block;
+
+}/*
+div#columns-blog-index-july{
+	display:block;
+}*/
 /*
 ** Unsorted
 */
+
 
 .center-title {
 	margin:0 auto;
@@ -243,12 +318,7 @@ a.blog-title {
 	font-size:2.0em;
 	font-family: 'Bad Script',cursive;
 }
-section {
-	/*padding-left:10px;*/
-}
-main {
-	color:#3F3E40;
-}
+
 
 
 
