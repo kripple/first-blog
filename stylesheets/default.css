@@ -249,35 +249,35 @@ strong {
 ** Blog Index
 */
 
-p.nolink-title {
-	font-family:'Bad Script',cursive;
-	font-size:2em;
+.blog-index-title {
+	font-family: 'Bad Script', cursive;
+	font-size:1.5em;
 	margin:0;
-	padding-top: 32px;
 }
 
 ul.month-div {
 	display:block;
 	list-style-type:none;
 	margin-top: 0.5em;
-	margin-bottom:0;
-	padding: 0.5em;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding: 0px 0.5em 0px 0.5em;
 	color:#7E7C7F;
 }
-li.month-div-left {
-	display:inline-block;
-	width:38%;
-}
+
 li.month-div-center {
 	display:inline-block;
 	width:20%;
-	text-align:center;
+	text-align:left;
 }
 li.month-div-right{
 	display:inline-block;
-	width:38%;
+	width:76%;
 }
 
+hr.month-divider {
+	margin-top: -9px;
+}
 
 div.columns-blog-index{
 	display:block;
@@ -286,12 +286,14 @@ div.columns-blog-index{
 div.column-one-blog-index {
 	display:inline-block;
 	vertical-align: top;
+	text-align: center;
 	width:49%;
 
 }
 div.column-two-blog-index {
 	display:inline-block;
 	vertical-align: top;
+	text-align: center;
 	width:49%;
 
 }
