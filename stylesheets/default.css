@@ -180,7 +180,7 @@ div.footer-link {
 	width:200px;	
 	display:block;
 	margin:0 auto;
-	border:2px solid #3F3E40;;
+	border:2px solid #3F3E40;
 }
 div.columns-abt-me {
 	display:block;
@@ -321,6 +321,11 @@ div#columns-blog-index-july{
 .page-title {
 	font-size:2.0em;
 	font-family: 'Bad Script',cursive;
+}
+.qna-response {
+	margin-left:15px;
+	padding-left:8px;
+	border-left:3px solid #BDBBBF;
 }
 
 
