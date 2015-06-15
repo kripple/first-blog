@@ -171,9 +171,10 @@ div.footer-link {
 */
 
 #blog-photo {
-	display:inline-block;
+	display:block;
 	margin:0 auto;
 	width:240px;
+	padding-bottom:15px;
 }
 #blog-photo img {
 	width:200px;	
@@ -183,21 +184,22 @@ div.footer-link {
 }
 div.columns-abt-me {
 	display:block;
-	height:258px; 
+
 }
 div.column-one-abt-me {
 	display:inline-block;
-	max-width: 300px;
     float: left;
-    height: 236px;
   	padding-top: 32px;
+  	width:45%;
 }
 div.column-two-abt-me {
 	display:inline-block;
-	max-width: 300px;
     float: right;
-    height: 236px;
   	padding-top: 32px;
+  	width:45%;
+}
+p#make-block {
+	display:block;
 }
 
 /*
