@@ -258,21 +258,19 @@ strong {
 ul.month-div {
 	display:block;
 	list-style-type:none;
-	margin-top: 0.5em;
-	margin-top:0px;
-	margin-bottom:0px;
+	margin: 0px;
 	padding: 0px 0.5em 0px 0.5em;
 	color:#7E7C7F;
 }
 
 li.month-div-center {
 	display:inline-block;
-	width:20%;
-	text-align:left;
+	width:19%;
+	text-align:center;
 }
 li.month-div-right{
 	display:inline-block;
-	width:76%;
+	width:77%;
 }
 
 hr.month-divider {
@@ -297,12 +295,6 @@ div.column-two-blog-index {
 	width:49%;
 
 }
-div#columns-blog-index-may{
-	display:block;
-
-}
-div#columns-blog-index-june{
-	display:block;
 
 }/*
 div#columns-blog-index-july{
