@@ -262,7 +262,10 @@ ul.month-div {
 	padding: 0px 0.5em 0px 0.5em;
 	color:#7E7C7F;
 }
-
+li.month-div-left{
+	display:inline-block;
+	width:38%;
+}
 li.month-div-center {
 	display:inline-block;
 	width:19%;
@@ -270,7 +273,7 @@ li.month-div-center {
 }
 li.month-div-right{
 	display:inline-block;
-	width:77%;
+	width:38%;
 }
 
 hr.month-divider {
