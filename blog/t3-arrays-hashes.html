@@ -63,6 +63,11 @@ Hash.new(3,"apple") # => probably a syntax error (don't do this)</code></p>
       <p><code>puts array[integer] # => value of the array at the specified integer 
 puts hash["key"] # => value of the hash at the specified key</code></p>
       <p>Arrays have integer index &lt;-> value pairs, hashes have key &lt;-> value pairs. Try creating and then accessing array/hash values at indices/keys that do not exist. That way, you'll be able to recognize it if you ever do it unintentionally.</p>
+
+      <h2>Bonus</h2>
+      <p><code>puts array.index(value) # => index of the array at the specified value
+puts hash.key(value) # => key of the hash at the specified value</code></p>
+      <p>For duplicate values at different indices/keys, the above two statements will return the first index/key that corresponds to the specified value.</p>
     </section>
   </main>
 
