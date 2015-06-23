@@ -1,0 +1,27 @@
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+tr {
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
+th {
+	font-size: 1.2em;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	background-color: #3F3E40;
+	color: #fff;
+}
+td {
+  	border: 1px solid #3F3E40;
+  	padding: 3px 7px 2px 7px;
+}
+
