@@ -1,0 +1,15 @@
+table{
+	border-collapse: collapse;
+}
+td {
+	width:70em;
+}
+tr, td {
+	padding:0.4em;
+}
+td.first-column {
+	width: 10em;
+	vertical-align: top;
+	
+}
+
