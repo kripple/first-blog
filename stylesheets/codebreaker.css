@@ -1,0 +1,42 @@
+* {
+	background-color: #4C4B4B;
+	font-family: 'Lora';
+}
+
+div#title-block {
+	display: block;
+	margin:0 auto;
+	width:500px;
+	text-align: center;
+}
+#title {
+	color:#FFF6FB;
+}
+
+table.codebreaker {
+	background-color: #CCC9C9;
+	border: 3px solid #CCC9C9;
+	display: block;
+	margin:0 auto;
+	
+	height:402px;
+	text-align: center;
+}
+table.codebreaker td {
+	width:41px;
+	background-color: #CCC9C9;
+}
+table.codebreaker td img {
+	background-color: #CCC9C9;
+}
+td.left-text, td.right-text {
+	width:25%;
+}
+
+footer {
+	display: block;
+	margin:0 auto;
+	width:500px;
+	text-align: center;
+}
+
