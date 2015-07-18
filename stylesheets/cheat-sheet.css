@@ -1,3 +1,7 @@
+* {
+	font-family: 'Lora';
+}
+
 main {
 	position:relative.;
 }
@@ -16,59 +20,68 @@ main {
     border: 1px solid black;
     border-radius: 5px;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .positioning {
     border: 1px solid black;
     border-radius: 5px;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .boxed-up { 
 	border: 1px solid black;
 	border-radius: 5px;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
+}
+.box-img {
+	display:block;
+	width: 320px;
+	margin:0 auto;
 }
 
 .content-alignment {
     border: 1px solid black;
     border-radius: 5px;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .units {
     border: 1px solid black;
     border-radius: 5px;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .useage {
     border: 1px solid black;
     border-radius: 5px;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .centering {
 	border: 1px solid black;
 	border-radius: 5px;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .outer {
     position: relative;
-    height:1100px;
+    height:1250px;
 }
 
 .copywright {
-	position:absolute;
     text-align:center;
-    width:100%;
-   	bottom:0;
+}
+a {
+	text-decoration: none;
+	color:orange;
+}
+a:hover {
+	color:blue;
 }
