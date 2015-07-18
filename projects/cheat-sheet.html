@@ -17,33 +17,42 @@
 
 <div class="outer">
 
+<table>
+<tr><td>
+
 <div class="column-one">
 <div class="title">
-    <h1>&lt;div&gt;CSS Positioning&lt;/div&gt;</h1>
-    <h2>Elements: Attributes</h2>
+    <h1>CSS Positioning</h1>
+    <h2>{ Elements: Attributes }</h2>
 </div>
 
 
 
 <div class="positioning">
     <section >
-       <h3>display: inline, block, inline-block;</h3>
+       <h3>{ display: inline, block, inline-block; }</h3>
        <p>Inline is default, block works like the &lt;p&gt; tag, it creates vertically arranged chunks, 
-       inline-block puts multiple chunks on the same line.</p>
+       inline-block puts multiple chunks on the same line. Also check out <a href="http://shmuwol.github.io/blog/t2-css-design.html">this</a> blog post.</p>
     </section>
     
     <section>
-       <h3>position: static, fixed, relative, absolute;</h3>
-       <p>static: default (it doesn't do anything, objects display in order).</p>
-       <p>fixed: displays objects relative to the browser window and provides immunity to scrolling.</p>
-        <p>relative: use left, right, top, bottom (see below) to push/pull elements without 
-            removing them from the flow of the page</p>
-        <p>absolute: use left, right, top, bottom (see below) to position elements in relation
-            to their parent element. Removes element from the flow of the page.</p>
-        <p>Bonus: If you assign position: relative to a container, you may then use position: absolute
-            on objects within the container.</p>
-        <p>For further differentiation between Relative and Absolute Positioning watch 
-            <a href="http://bit.ly/1GqDFwS">this video</a>.</p>
+      <h3>{ position: static, fixed, relative, absolute; }</h3>
+      <ul>
+      <li>static - default (it doesn't do anything, objects display in order).</li>
+      <li>fixed: displays objects relative to the browser window and provides immunity to scrolling.</li>
+      
+      <li>relative - use left, right, top, bottom (see below) to push/pull elements without 
+          removing them from the flow of the page.</li>
+      
+      <li>absolute - use left, right, top, bottom (see below) to position elements in relation
+          to their parent element. Removes element from the flow of the page.</li>
+      
+      <li>Bonus: If you assign position: relative to a container, you may then use position: absolute
+          on objects within the container, to great effect.</li>
+      
+      <li>For further differentiation between Relative and Absolute Positioning watch 
+          <a href="http://bit.ly/1GqDFwS">this video</a>.</li>
+      </ul>
     </section>
     
     <section>
@@ -54,17 +63,17 @@
     </section>
     
     <section>
-       <h3>float: left, right; Clear: left, right, both;</h3>
+       <h3>{ float: left, right; } { clear: left, right, both; }</h3>
        <p>Clear specifies on which side of the element floating elements are not allowed to float. 
-           For example, clear: right; would prohibit any floating elements to the right of the current element.</p>
-       <p>Float </p>
+           For example, clear: right; would prohibit any floating elements to the right of the current element. Use float with position: static, or position: relative.</p>
     </section>
 </div>
 
-<div class="content-alignment">
-    <h3>Content Alignment</h3>
-    <p>text-align: left, right, center;</p>
-    <p>Note: vertical-align only works on table cells, i.e. &lt;td&gt; tags.</p>
+<div class="units">
+    <h3>Pixels (px) vs. Relative-to-element (em) vs. Percentage (%)</h3>
+    <p>Pixels will make an element a fixed size relative to pixels on the screen. for example 'width: 50px;' would make the element 50 pixels wide.</p>
+    <p>em will set the element relative to the current size of the element.  For example, 0.5em means half the size of the current font.</p>
+    <p>Percentage will set the element as a percentage of the current size of the browser.  For example, 'width: 50%;' will make the element half the size of the parent element or the browswer</p>
 </div>
  
 </div>
@@ -72,8 +81,7 @@
 <div class="column-two">
     
 <div class="boxed-up">
-    <h3>Margin, Border, and Padding</h3>
-    <img src="../imgs/box-model.png">
+    <img class="box-img" src="../imgs/box-model.png">
 </div>
 
 <div class="useage">
@@ -90,24 +98,31 @@
 <div class="centering">
     <h3>The Art of Centering</h3>
     <p>Use these CSS settings to center an &lt;img&gt; or a &lt;div&gt;:</p>
-    <p>display: block;</p>
-    <p>width: nonzero (not 100%);</p>
-    <p>margin: auto; OR margin: 0 auto OR</p>
-    <p>margin-left: auto; margin-right: auto;</p>
+    <p>img, div {<br>
+    &emsp;display: block;<br>
+    &emsp;width: nonzero (not 100%);<br>
+    &emsp;margin: auto; OR margin: 0 auto OR<br>
+    &emsp;margin-left: auto; margin-right: auto;<br>
+    }</p>
+</div>
+
+<div class="content-alignment">
+    <h3>Content Alignment</h3>
+    <p>{ text-align: left, right, center; }<br>
+    { vertical-align: top, bottom, middle; }</p>
 </div>
 
 
-
-<div class="units">
-    <h3>Pixels (px) vs. Relative-to-element (em) vs. Percentage (%)</h3>
-    <p>Pixels will make an element a fixed size relative to pixels on the screen. for example 'width: 50px;' would make the element 50 pixels wide.</p>
-    <p>em will set the element relative to the current size of the element.  For example, .5em means half the size of the current font.</p>
-    <p>Percentage will set the element as a percentage of the current size of the browser.  For example, 'width: 50%;' will make the element half the size of the parent element or the browswer</p>
 </div>
 
-</div>
+</td></tr>
+
+<tr><td>
 
 <p class="copywright">Created By Mark &amp; Kelly</p>
+
+</td></tr>
+</table>
 
 </div>
 
