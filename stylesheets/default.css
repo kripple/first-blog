@@ -299,7 +299,19 @@ div.column-two-blog-index {
 
 }
 
-}/*
+}
+
+/*
+** Project-index
+*/
+div.centered-titles {
+	display:inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+
+
+/*
 div#columns-blog-index-july{
 	display:block;
 }*/
@@ -307,11 +319,23 @@ div#columns-blog-index-july{
 ** Unsorted
 */
 
-
 .center-title {
 	margin:0 auto;
 	text-align:center;
 	display:block;
+}
+.fancy-center-title {
+	margin:0 auto;
+	text-align:center;
+	display:block;
+	font-family: 'Bad Script', cursive;
+	font-size:1.5em;
+}
+.fancy-aligned-title {
+	display:block;
+	font-family: 'Bad Script', cursive;
+	font-size:1.5em;
+	padding-left:45px;
 }
 .page-title {
 	font-size:2.0em;
