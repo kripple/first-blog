@@ -353,7 +353,12 @@ div#columns-blog-index-july{
 	color:#7E7C7F;
 	padding-bottom: 8px;
 }
-
+.add-border {
+	border: 1px dashed #BDBBBF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 5px;
+}
 
 
 
