@@ -23,5 +23,10 @@ th {
 td {
   	border: 1px solid #3F3E40;
   	padding: 3px 7px 2px 7px;
+  	width:40%;
+}
+
+.first-row {
+	width:10%;
 }
 
