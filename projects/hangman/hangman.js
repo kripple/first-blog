@@ -142,7 +142,7 @@ $(document).ready(function(){
 	document.onkeypress=function(evt){
 
 		if( evt.keyCode == 13 ) {
-			var letter = $(".input-box").val();
+			var letter = $(".input-box").val().toLowerCase();
 			$(".input-box").val("");
 
 			// modified from: http://stackoverflow.com/questions/9862761/how-to-check-if-character-is-a-letter-in-javascript
