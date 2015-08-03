@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+  <title>Kelly Codes</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="shortcut icon" href="../imgs/tab-icon.ico">
+</head>
+
+<body>
+  <header>
+    <div id="title-block"><a href="http://kripple.github.io/index.html"><h1 id="title">Kelly Ripple</h1></a></div>
+
+    <nav id="social-media-buttons">
+      <a href="https://github.com/kripple"><img class="button" alt="#" src="../imgs/github.png"/></a>
+      <a href="https://www.linkedin.com/in/kellymripple"><img class="button" alt="#" src="../imgs/linkedin.png"/></a>
+      <a href="https://twitter.com/krippleffect"><img class="button" alt="#" src="../imgs/twitter.png"/></a>
+    </nav>
+
+    <ul class="nav-bar">
+      <li class="menu-list"><a href="http://kripple.github.io/index.html">About</a></li>
+      <li class="menu-list"><a href="http://kripple.github.io/projects/index.html">Projects</a></li>
+      <li class="menu-list"><a href="http://kripple.github.io/blog-index.html">Blog</a></li>
+      <li class="menu-list"><a href="../resume.pdf">Resume</a></li>
+      <li class="menu-list"><a href="mailto:kelly.m.ripple@gmail.com">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section>
+      <h4 class="blog-date">August 2, 2015</h4>
+      <h3 class="blog-title">Stuff I Learned Today (Phase 1, Week 1)</h3>
+
+      <p>This is going to be a bit stingy on examples and general organization. Please forgive me. I have limited time outside of my learning. Please email me if you have any questions or feedback about the stuff on this page.</p>
+      
+      <h3>Monday: fetch vs. ||</h3>
+
+      <p>Fetching arguments with the 'fetch' keyword (see below) is better than using the || (OR) operator to set default values. This is because the second option doesn't work all the time with boolean values (see pg. 48-49 of <a href="http://www.poodr.com/">POODR</a> for better explanation).</p>
+      <code>variable = args.fetch(:hash_key, default_value) #=> use this!
+variable = args[hash_key] || default_value #=> instead of this</code>
+
+      <h3>Tuesday: <a href="http://rubular.com/">Regular Expressions</a>; <a href="http://ruby-doc.org/core-2.1.4/String.html#method-i-gsub">gsub</a>; divmod; parallel assignment</h3>
+
+      <p>Variable length regex operators:<br><br>
+      + [1-infinity]<br>
+      ? [0-1]<br>
+      * [0-infinity]</p>
+
+      <p>regex lookbacks (?&lt;='pattern') and lookaheads (?='pattern') (I have no idea what the third option - atomic operators - are used for)</p>
+
+      <p>use slice(=&gt; string), scan(=&gt; array), match (=&gt; object) with regexps</p>
+
+      <p><code>stuff.each(&amp;:foo)</code> is equivalent to <code>stuff.each { |obj | obj.foo }</code><br>
+      the '&amp;' calls to_proc on 'foo' and passes it as a block to the method 'each'</p>
+
+      <p>gsub (global substitution):</p>
+
+      <code>"New York City".gsub(/[aeiou]/, '*') #=> "N*w Y*rk C*ty"<br>
+# note the addition of the parens (), the '\1' doesn't work without them
+"New York City".gsub(/([aeiou])/, '*\1*') #=> "N*e*w Y*o*rk C*i*ty"<br>
+"New York City".gsub(/[eio]/, 'e' => 3, 'i' => 1, 'o' => '*') #=> "N3w Y*rk C1ty"</code>
+
+      <p>parallel assignment:</p>
+
+      <code>quotient, remainder = 5.divmod(2)
+#=> quotient = 2
+#=> remainder = 1</code>
+
+      <h3>Wednesday: Recursion; blocks, procs, &amp; lambdas; String methods</h3>
+
+      <p>Recursion:</p>
+
+      <ol>
+      <li>Identify base case </li>
+      <li>Describe the action ( return function)</li>
+      <li>Your original function call will pause at the line with the recursive call, and will not complete until all future calls evaluate to a finite value (goes down the stack, and then back up)</li>
+      <li>movie theatre analogy (see below)</li>
+      <li>If you have things to do 'in case of failure', (for a boolean example) sandwich them between your true and false cases:</li>
+      </ol>
+
+      <code>def recursive_function(input_args)
+  return true if base_case == true # &lt;-- one of two choices for each recursive call
+  <br>  (...)<br>
+  # call function after the logic, before the reset
+  return true if recursive_function(input_args + increment) == true
+  do_things_for_fail_case
+  return false # &lt;-- the other choice for each recursive call
+end</code>
+     
+      <p>Your function will only perform the bottom two lines for recursive iterations that are not true.</p>
+
+      <p>Pay special attention to input arguments and return values. The different function calls are, if effect, your variables (initially, I had difficulty conceptualizing the problem because I couldn't figure out what variables to use).</p>
+
+      <p>Movie theatre analogy from <a href="http://www.quora.com/Aaron-Krolik">Aaron Krolik on Quora</a>:<br><br>
+      Someone in a movie theater asks you what row you're sitting in. You don't want to count, so you ask the person in front of you what row they are sitting in, knowing that you will respond one greater than their answer. The person in front will ask the person in front of them. This will keep happening until word reaches the front row, and it is easy to respond: "I'm in row 1!" From there, the correct message (incremented by one each row) will eventually make its way back to the person who asked.<br><br>
+
+      Why is this a good explanation?<br><br>
+
+      It gets across three points:<br>
+      <ol>
+      <li>There are some questions that may be inherently recursive and that some questions are easier to solve recursively.</li>
+      <li>The question I am asking ("what row am I in?") can be rephrased recursively as: "how many people are in front of me + 1?" with a base case of zero people in front of me.</li>
+      <li>It also illustrates the idea of a recursive call stack and how calls are pushed on then popped off the stack.</li>
+      </ol>
+      </p>
+
+      <p>We had a breakout session on blocks, procs and lambdas. My notes:</p>
+
+      <ul><li>Every block is either a proc or a lambda. The only difference between a proc and a lambda is how they return (more on that below).</li></ul>
+
+      <code>var = lambda { |i| puts i }
+var.call("PRINT") #=> "PRINT"</code>
+
+      <ul>
+      <li>can pass blocks to methods with <code>{}</code> (without the 'lambda' keyword). these are unnamed lambdas (pretty sure they're lambdas, not procs)</li>
+      <li>lambda's return control to the original function. If a proc returns, it breaks out of the original function (e.g. <code>Proc.new {return}.call</code>)</li>
+      <li>Proc is a class. <code>Proc.new</code> is a thing, <code>lambda.new</code> is not a thing</li>
+      <li>use <code>unless !block_given?</code> in methods to check if a block is passed. Example:</li>
+      </ul>
+      
+      <p><code>def calc(a,b)
+  yield(a,b) unless !block_given?
+end</code></p>
+
+      <p><code>calc(4,5) { |x, y| x + y }</code></p>
+
+      <ul><li>if your method yields to a block that accepts variables, pass them in parens with 'yield' (see above)</li></ul>
+
+      <p>Ruby (String) method of the day: <a href="http://ruby-doc.org/core-2.0.0/String.html#method-i-chars"><code>chars</code></a>. <code>chars</code> is equivalent to <code>split("")</code></p>
+
+      <code>str = "I am Groot."
+str.chars #=> ["I", " ", "a", "m", " ", "G", "r", "o", "o", "t", "."]
+str.split("") #=> ["I", " ", "a", "m", " ", "G", "r", "o", "o", "t", "."]</code>
+      
+    </section>
+
+  </main>
+
+  <footer>
+    <!--<p id="legal">Legal Stuff</p>-->
+  </footer>
+</body>
+
