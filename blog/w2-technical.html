@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+  <title>Kelly Codes</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="shortcut icon" href="../imgs/tab-icon.ico">
+</head>
+
+<body>
+  <header>
+    <div id="title-block"><a href="http://kripple.github.io/index.html"><h1 id="title">Kelly Ripple</h1></a></div>
+
+    <nav id="social-media-buttons">
+      <a href="https://github.com/kripple"><img class="button" alt="#" src="../imgs/github.png"/></a>
+      <a href="https://www.linkedin.com/in/kellymripple"><img class="button" alt="#" src="../imgs/linkedin.png"/></a>
+      <a href="https://twitter.com/krippleffect"><img class="button" alt="#" src="../imgs/twitter.png"/></a>
+    </nav>
+
+    <ul class="nav-bar">
+      <li class="menu-list"><a href="http://kripple.github.io/index.html">About</a></li>
+      <li class="menu-list"><a href="http://kripple.github.io/projects/index.html">Projects</a></li>
+      <li class="menu-list"><a href="http://kripple.github.io/blog-index.html">Blog</a></li>
+      <li class="menu-list"><a href="../resume.pdf">Resume</a></li>
+      <li class="menu-list"><a href="mailto:kelly.m.ripple@gmail.com">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section>
+      <h4 class="blog-date">August 9, 2015</h4>
+      <h3 class="blog-title">Stuff I Learned Today (Phase 1, Week 2)</h3>
+
+      <p>Disclaimer: This is going to be a bit stingy on examples and general organization. Please forgive me. I have limited time outside of my learning. Please email me if you have any questions or feedback about the stuff on this page.</p>
+      
+      <h3>access a hash:</h3>
+
+      <p>yes -> <code>hash[:key]</code><br>
+      yes -> <code>hash["key"]</code><br>
+      no -> <code>hash[key]</code></p>
+
+      <h3>delete array elements:</h3>
+
+      <p><code>a.delete(value)
+a.delete_at(index)</code></p>
+    
+      <h3>case statements:</h3>
+
+      <p>I look up how to use these every time I need one. Now I can just check here!</p>
+
+      <p><code>case variable
+when 5
+  puts "Option One"
+when 7
+  puts "Option Two"
+when (10..100)
+  puts "Option Three"
+else
+  puts "Not an Option"
+end</code></p>
+
+      <h3>ruby conventions:</h3>
+
+      <p>#instance_methods<br>
+      ::class_methods</p>
+
+      <h3>splat operator:</h3>
+
+      <p><code>[*"1".."5"] #-> ["1","2","3","4","5"]</code></p>
+
+      <h3>eval keyword:</h3>
+
+      <p>(need to play around with some examples)</p>
+
+      <h3>ruby methods:</h3>
+
+      <p><code>all? #-> returns true if the passed condition evaluates to true for all elements
+any? #-> returns true if the passed condition evaluates to true for any element</code></p>
+      <p><code>zip #-> zips 1D arrays of the same size into hashes</code></p>
+
+      <h3>union operator:</h3>
+
+      <p><code>[1,2,3] | [4,5,6] #-> [1,2,3,4,5,6]
+[1,2,3] | [1,2,3] #-> [1,2,3]
+[1,2,3,4,5] | [3,4,5,6,7] #-> [1,2,3,4,5,6,7]</code></p>
+
+      <h3>fetch:</h3>
+
+      <p><code>arg = hash.fetch(:key,default) OR
+arg = hash.fetch(:key) {default}</code></p>
+
+      <h3>inheritance:</h3>
+
+      <p><code>class DoStuff 
+  include Stuff
+  def method
+    self.class.stuff_method
+      OR
+    DoStuff.stuff_method (but opt 1 is better in case you change the name of DoStuff)
+  end
+end</code></p>
+
+      <p><code>thing.class.ancestors</code> display the inheritance chain for thing</p>
+
+      <p><code>class Thing &lt; OtherThing # Thing inherits from OtherThing</code></p>
+
+      <p>keyword <code>super</code> looks to superclass for behavior</p>
+
+      <h3>stuff I learned @ code review:</h3>
+
+      <ul>
+      <li>hashes are for labeled pieces of data</li>
+      <li>use hashes with descriptive keys</li>
+      <li>hashes are like arrays, just with more helpful indices (good for anyone that needs to read and understand your code)</li>
+      </ul>
+
+      <p>when to use a data structure (string,hash,array,etc) vs. when to use a class:</p>
+
+      <p>if all you need to do is *hold state*, use a data struct<br>
+      if you will ever need to *have behavior*, use a class</p>
+
+      <h3>classes vs. modules:</h3>
+
+      <p>use a module if you only need one instance, use classes if you need multiple</p>
+
+      <h3>Miscellany</h3>
+
+      <p><code>system("clear")</code></p>
+
+      <p><code>extend self</code> transforms all methods to <code>self.method</code></p>
+
+      <p><code>array.shuffle.pop</code> isn't destructive because <code>shuffle</code> returns a new array</p>
+
+      <p>use <code>binding.pry</code> and you can <code>cd</code> into objects
+      <code>exit</code> moves to the next <code>binding.pry</code> (exits pry and runs your program)</p>
+
+      <p>Sublime -> edit -> special characters for emoji</p>
+
+      <p>use <code>$stdin.gets</code> or <code>STDIN.gets</code> when there's an <code>ARGV</code> in the file</p>
+
+      <p>cmd + shift + d to dupe a line<br>
+      ctr + cmd + arrow to move selected lines</p>
+
+      <h3>parsing examples:</h3>
+
+      <p><code>def import(file)
+  data = CSV.read(file,opts).to_a
+  # CSV.read returns a CSV table thats in the format of an array of arrays & the first row is the headers. Need to convert to array to use array methods
+  # opts: headers: true, header_converters: :symbol
+  headers = data.shift # pops off headers row
+  data.map do |person_data|
+    Hash[headers.zip(person_data)] # crazy conversion magic
+  end
+end
+
+def save(file, data)
+  CSV.open(file,"w") do |csv|
+    csv &lt;&lt; data.first.keys
+    data.each do |row|
+      csv &lt;&lt; row.values
+    end
+  end
+end</code></p>
+
+      <p>Here's another implementation:</p>
+
+      <p><code>module Parser
+  def import(file)
+    data = CSV.read(file).to_a
+    # CSV.read returns a CSV table that's in the format of an array of arrays & the first row is the headers. Need to convert to array to use array methods
+    data.map do |row|
+      row
+    end
+  end
+
+  def save(file, data)
+    CSV.open(file,"w") do |csv|
+      data.each do |row|
+        csv &lt;&lt; [row] # takes arrays only. CSV needs to know where the comma column separators go
+      end
+    end
+    #File.write(file, new_file)
+  end
+end</code></p>
+
+      <p>Then you do 'include Parser' in your class and 'require_relative 'parser'' at the top of your file</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <!--<p id="legal">Legal Stuff</p>-->
+  </footer>
+</body>
+
