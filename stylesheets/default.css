@@ -169,7 +169,11 @@ div.footer-link {
 /*
 ** About Me
 */
-
+figure {
+    text-align: center;
+    display:block;
+	margin:0 auto;
+}
 #blog-photo {
 	display:block;
 	margin:0 auto;
@@ -181,6 +185,16 @@ div.footer-link {
 	display:block;
 	margin:0 auto;
 	border:2px solid #3F3E40;
+}
+img.phone-width {
+	width:320px;	
+	display:block;
+	margin:0 auto;
+	border:2px solid #3F3E40;
+}
+figcaption {
+	font-size: 0.8em;
+	padding:5px;
 }
 div.columns-abt-me {
 	display:block;
