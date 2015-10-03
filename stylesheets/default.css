@@ -323,7 +323,10 @@ div.centered-titles {
 	vertical-align: top;
 	text-align: center;
 }
-
+a.small-caps-tag {
+	font-size: 10px;
+	margin-left: 10px;
+}
 
 /*
 div#columns-blog-index-july{
