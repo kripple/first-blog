@@ -294,9 +294,7 @@ $(document).ready(function(){
 		};
 		if (lose == true) {
 			$(".definition").empty().append("Better luck next time!");
-			$(".definition").append("Solution: " + solution );
-			$(".definition").append("The definition of " + solution + " is: ");
-			$(".definition").append(dictionary[solution]);
+			$(".definition").append(" Answer \"" + solution + "\"" );
 		};
 	};
 
