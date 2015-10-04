@@ -293,8 +293,9 @@ $(document).ready(function(){
 			$(".definition").append(dictionary[solution]);
 		};
 		if (lose == true) {
+			$(".blank-letters").empty().append(solution);
 			$(".definition").empty().append("Better luck next time!");
-			$(".definition").append(" Answer \"" + solution + "\"" );
+			$(".definition").css({'text-align':'center'}).hide().fadeIn(1);
 		};
 	};
 
