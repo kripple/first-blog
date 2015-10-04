@@ -98,6 +98,7 @@ var dictionary = {
 	"lithe": "Slender and flexible.",
 	"love": "Deep affection.",
 	"mellifluous": "Sweet sounding.",
+	"meretricious": "apparently attractive but having in reality no value or integrity.",
 	"moiety": "One of two equal parts.",
 	"mondegreen": "A slip of the ear.",
 	"murmurous": "Murmuring.",
@@ -293,7 +294,9 @@ $(document).ready(function(){
 		};
 		if (lose == true) {
 			$(".definition").empty().append("Better luck next time!");
-			$(".definition").css({'text-align':'center'}).hide().fadeIn(1);
+			$(".definition").append("Solution: " + solution );
+			$(".definition").append("The definition of " + solution + " is: ");
+			$(".definition").append(dictionary[solution]);
 		};
 	};
 
